@@ -21,13 +21,22 @@ class HomeActivity extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text("Simple card."),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          
-        ]
+      body: Center(
+        child: Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shadowColor: Color.fromRGBO(33, 191, 115, 1),
+          color: Color.fromRGBO(33, 191, 115, 1),
+          elevation: 40,
+          child: SizedBox(
+            height: 200,
+            width: 200,
+            child: Center(
+              child: Text("This a card."),
+            ),
+          ),
+        ),
       ),
     );
   }
