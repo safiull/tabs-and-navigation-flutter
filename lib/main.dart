@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'Fragment/AlarmFragment.dart';
+import 'Fragment/BalanceFragment.dart';
+import 'Fragment/ContactFragment.dart';
+import 'Fragment/EmailFragment.dart';
+import 'Fragment/HomeFragment.dart';
+import 'Fragment/ProfileFragment.dart';
+import 'Fragment/SearchFragment.dart';
+import 'Fragment/SettingsFragment.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -37,7 +46,19 @@ class HomeActivity extends StatelessWidget {
               Tab(icon: Icon(Icons.account_balance), text: "Balance"),
             ]
           ),
-        )
+        ),
+        body: TabBarView(
+          children: [
+            HomeFragment(),
+            SearchFragment(),
+            SettingsFragment(),
+            EmailFragment(),
+            ContactFragment(),
+            ProfileFragment(),
+            AlarmFragment(),
+            BalanceFragment(),
+          ],
+        ),
       ),
     );
   }
